@@ -1,6 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import WebSocket from 'ws';
-export default function handler(req, res) {
+export default function handler(req: VercelRequest, res: VercelResponse) {
     const wss = new WebSocket.Server({ noServer: true });
   
     wss.on('connection', function connection(ws) {
@@ -12,7 +12,7 @@ export default function handler(req, res) {
       ws.send('Hello, client!');
     });
   
-    if (req.socket.server) {
+    if (req.socket) {
       wss.handleUpgrade(req, req.socket, Buffer.alloc(0), (ws) => {
         wss.emit('connection', ws, req);
       });
