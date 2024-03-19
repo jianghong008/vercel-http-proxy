@@ -1,0 +1,23 @@
+{
+  "name": "deta-http-proxy",
+  "version": "1.0.0",
+  "description": "local http proxy",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only ./api/index.ts"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "jh",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/node": "^3.0.24",
+    "koa": "^2.15.1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.15.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0"
+  }
+}
