@@ -7,6 +7,10 @@
       "api/hello.ts": {
         "memory": 1024,
         "maxDuration": 10
+      },
+      "api/ws.ts": {
+        "memory": 1024,
+        "maxDuration": 10
       }
     }
   }
